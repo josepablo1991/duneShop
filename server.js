@@ -1,5 +1,11 @@
 if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
+}else {
+
+  const stripeSecretKey = pk_test_nHBtwDn0V3OtlaYw8HfK0HXX00XvHghde5
+  const stripePublicKey = sk_test_pnpT8xtW4TVxfWMmFH3DRFzI00UnofNN8y
+
+
 }
 
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
