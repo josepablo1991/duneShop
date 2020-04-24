@@ -1,5 +1,9 @@
 if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
+
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+  const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
+
 }else {
 
   const stripeSecretKey = pk_test_nHBtwDn0V3OtlaYw8HfK0HXX00XvHghde5
@@ -8,8 +12,6 @@ if(process.env.NODE_ENV !== 'production'){
 
 }
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY
-const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 
 // console.log(stripeSecretKey,stripePublicKey);
 
