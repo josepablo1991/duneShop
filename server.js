@@ -1,16 +1,16 @@
 if(process.env.NODE_ENV !== 'production'){
   require('dotenv').config();
 
-  const stripeSecretKey = process.env.STRIPE_SECRET_KEY
-  const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
-
-}else {
-
-  const stripeSecretKey = pk_test_nHBtwDn0V3OtlaYw8HfK0HXX00XvHghde5
-  const stripePublicKey = sk_test_pnpT8xtW4TVxfWMmFH3DRFzI00UnofNN8y
-
+  // const stripeSecretKey = process.env.STRIPE_SECRET_KEY
+  // const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 
 }
+
+
+
+//This are stripe test defautl keys
+const stripeSecretKey = pk_test_nHBtwDn0V3OtlaYw8HfK0HXX00XvHghde5
+const stripePublicKey = sk_test_pnpT8xtW4TVxfWMmFH3DRFzI00UnofNN8y
 
 
 // console.log(stripeSecretKey,stripePublicKey);
