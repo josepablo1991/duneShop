@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dune Fan Page |About</title>
+    <!-- The metag appears on the google browser results  -->
+    <meta name= "description" content="This is the description"></meta>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script src="store.js" defer></script>
+    <script>
+      var stripePublicKey = '<%= stripePublicKey %>'
+    </script>
+  </head>
+  <body>
+    <!-- Header Elemts showing this is a header of the web page  -->
+    <header class ="main-header">
+      <!-- Navigation element  -->
+      <nav class= "nav main-nav">
+        <!-- Unordered list element  -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <!-- Horizontal rule and creates a horizonal line -->
+      <h1 class="page-name">Dune Fan Page</h1>
+    </header>
+    <!-- Indicating the generic section of a web page  -->
+    <section class= "container content-section">
+      <h2 class= "section-header">BOOKS</h2>
+    </section>
+    <div class= "shop-items">
+      <% items.books.forEach(function(item){ %>
+        <div class= "shop-item" data-item-id="<%=item.id%>">
+          <span class= "shop-item-title"> <%= item.name %></span>
+          <img class= "shop-item-image" src = "images/<%= item.imgName %>">
+          <div class = "shop-item-details">
+            <span class = "shop-item-price">$<%= item.price / 100 %></span>
+            <button class ="btn btn-primary shop-item-button" role="button">ADD TO CART</button>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+    <section class= "container content-section">
+      <h2 class= "section-header" >MERCH</h2>
+    </section>
+    <div class= "shop-items">
+      <% items.merch.forEach(function(item){ %>
+        <div class= "shop-item" data-item-id="<%=item.id%>">
+            <span class= "shop-item-title"><%= item.name %></span>
+          <img class= "shop-item-image" src = "images/<%= item.imgName %>" width= "300">
+          <div>
+            <span class = "shop-item-price">$<%= item.price / 100 %></span>
+            <button class ="btn btn-primary shop-item-button"  role="button">ADD TO CART</button>
+          </div>
+        </div>
+      <%  }) %>
+    </div>
+    <section class= "container content-section">
+      <h2 class= "section-header" >CART</h2>
+        <div class = "cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class= "cart-items">
+        </div>
+      <div class= "cart-total">
+        <span class ="cart-total-title">TOTAL</span>
+        <span class ="cart-total-price" >$0<span>
+      </div>
+        <botton class = "btn btn-primary btn-purchase"role="botton">PURCHASE</botton>
+    </section>
+    <footer class= "main-footer">
+      <div class= "container main-footer-container">
+        <h3 class="page-name-footer">Dune</h3>
+          <ul class = "nav footer-nav">
+            <li><a href ="https://www.youtube.com/watch?v=-DgXlXXRjA4" target= "_blank" >
+              <img src = "images/spotify.png" width= 30 >
+            </a>
+          </li>
+            <li>
+              <a href ="https://www.youtube.com/watch?v=-DgXlXXRjA4" target= "_blank">
+                <img src = "images/yt.png" width = 30>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </footer>
+  </body>
+</html>

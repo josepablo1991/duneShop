@@ -1,0 +1,42 @@
+{
+  "books": [
+    {
+      "id":1,
+      "name":"Book 1",
+      "price": 1299,
+      "imgName": "dune_book1.jpeg"
+    },
+    {
+      "id":2,
+      "name":"Book 2",
+      "price": 1099,
+      "imgName": "dune_book2.jpeg"
+    },
+    {
+      "id":3,
+      "name":"Book 3",
+      "price": 999,
+      "imgName": "dune_book3.jpeg"
+    },
+    {
+      "id":4,
+      "name":"Book 4",
+      "price": 1999,
+      "imgName": "dune_book4.jpeg"
+    }
+  ],
+  "merch":[
+    {
+      "id":5,
+      "name":"T-shirt1",
+      "price": 1999,
+      "imgName": "dune_tshirt1.jpg"
+    },
+    {
+      "id":6,
+      "name":"T-shirt2",
+      "price": 1999,
+      "imgName": "dune_tshirt2.jpg"
+    }
+  ]
+}
